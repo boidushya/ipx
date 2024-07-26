@@ -25,6 +25,6 @@ app.use(cors());
 app.use("/*", (c) => createIPXWebServer(ipx)(c.req.raw));
 
 export default {
-  port: 8080,
+  port: process.env.PORT ?? 8080,
   fetch: app.fetch,
 };
