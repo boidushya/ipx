@@ -1,13 +1,20 @@
 {
   "name": "ipx",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "NODE_ENV=development && bun run --hot src/index.ts",
+    "start": "NODE_ENV=production && bun dist/index.js",
+    "build:kill-dist": "rimraf ./dist",
+    "build:code": "tsc && tsc-alias",
+    "build": "npm run build:kill-dist && npm run build:code"
   },
   "dependencies": {
     "hono": "^4.5.1",
     "ipx": "^3.0.1"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.10",
+    "typescript": "^5.5.4"
   }
 }
