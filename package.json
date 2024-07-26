@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "hono": "^4.5.1",
-    "ipx": "^3.0.1"
+    "ipx": "^3.0.1",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/bun": "latest",
